@@ -1,10 +1,43 @@
 body {
   margin: 0;
   padding: 0;
-}.slider {
+  font-family: "Gilroy";
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(fonts/Gilroy-Light.otf);   
+ }
+.home__page {
+
+}
+.slide__first_btn {
+  background: url(img/btn.png) no-repeat;
+  margin-left: 30px;
+  width: 200px;
+  height: 60px;
+  border: none;
+}
+
+p span:nth-child(1) {
+  font-size: 25px;
+}
+p span:nth-child(2) {
+  font-size: 90px;
+}
+.home__page_img {
+  margin: 25px 0 0 60px;
+  width: 122px;
+  height: 22x;
+
+}
+.slide__first_slide {
+
+}
+div p {
+  margin: 85px 0 0 60px;
+}
+.slider {
   position: relative;
-  width: 1024px;
-  height: 768px;
   margin: 0 0 auto;
   padding: 0;
   /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
@@ -22,8 +55,7 @@ body {
 }
 
 .slider-list {
-  width: 1024px;
-  height: 768px;
+
   overflow: hidden;
 }
 
@@ -45,11 +77,15 @@ body {
   /* Чтобы слайды не сжимались */
   flex-shrink: 0;
   /* Увеличиваем и центрируем цифру внутри слайда */
-  font-size: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid #000;
+}
+
+.slide:nth-child(1) {
+  background: url(img/bg.jpg);
+  background-position:center center;
+  background-size:cover;
+  width: 1024px;
+  height: 768px;
 }
 
 .slider-arrows {
@@ -60,9 +96,9 @@ body {
 .prev {
   background: none;
   border: none;
-  margin: 0 10px;
   font-size: 30px;
   cursor: pointer;
+  display: none;
 }
 
 .next.disabled,
