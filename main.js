@@ -35,7 +35,7 @@ var slider = {
     moveSlidePosition: function(event) {
       // Magic Numbers =(
       this.el.allSlides.css({
-        "background-position": $(event.target).scrollLeft()/6-341+ "px 0"
+        "background-position": $(event.target).scrollLeft()/6-100+ "px 0"
       });  
     },
     
