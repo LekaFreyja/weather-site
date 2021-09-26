@@ -2,9 +2,10 @@ let slider = document.querySelector('.slider'),
   sliderList = slider.querySelector('.slider-list'),
   sliderTrack = slider.querySelector('.slider-track'),
   slides = slider.querySelectorAll('.slide'),
-  arrows = slider.querySelector('.slider-arrows'),
-  prev = arrows.children[0],
-  next = arrows.children[1],
+  arrows = slider.querySelector('.slide__first_slide'),
+  arrows1 = document.querySelector('.home__page')
+  prev = document.querySelector('.home__page_img'),
+  next = slider.querySelector('.slide__first_btn'),
   slideWidth = slides[0].offsetWidth,
   slideIndex = 0,
   posInit = 0,
@@ -172,10 +173,19 @@ slider.addEventListener('mousedown', swipeStart);
 arrows.addEventListener('click', function() {
   let target = event.target;
 
-  if (target.classList.contains('next')) {
+  if (target.classList.contains('slide__first_btn')) {
     slideIndex++;
-  } else if (target.classList.contains('prev')) {
-    slideIndex--;
+    } else {
+    return;
+  }
+
+  slide();
+});
+arrows1.addEventListener('click', function() {
+  let target = event.target;
+
+  if (target.classList.contains('home__page_img')) {
+    slideIndex = 0;
   } else {
     return;
   }

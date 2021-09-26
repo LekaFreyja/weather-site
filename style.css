@@ -25,10 +25,17 @@ p span:nth-child(2) {
   font-size: 90px;
 }
 .home__page_img {
+  position: absolute;
   margin: 25px 0 0 60px;
   width: 122px;
   height: 22x;
-
+  z-index: 4;
+  border: none;
+}
+.icon_home {
+visibility: visible;
+width: 122px;
+height: 22x;
 }
 .slide__first_slide {
 
@@ -98,7 +105,7 @@ div p {
   border: none;
   font-size: 30px;
   cursor: pointer;
-  display: none;
+
 }
 
 .next.disabled,
