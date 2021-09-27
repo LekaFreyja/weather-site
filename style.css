@@ -47,18 +47,12 @@ div p {
   position: relative;
   margin: 0 0 auto;
   padding: 0;
-  /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
   user-select: none;
-  /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
   touch-action: pan-y;
 }
 
-/* Если где-то внутри слайдера будут изображения,
-то нужно задать им pointer-events: none,
-чтобы они не перетаскивались мышью */
-
 .slider img {
-  poiner-events: none;
+  pointer-events: none;
 }
 
 .slider-list {
@@ -81,10 +75,7 @@ div p {
 .slide {
   width: 1024px;
   height: 768px;
-  /* Чтобы слайды не сжимались */
   flex-shrink: 0;
-  /* Увеличиваем и центрируем цифру внутри слайда */
-  border: 1px solid #000;
 }
 
 .slide:nth-child(1) {

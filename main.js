@@ -71,7 +71,6 @@ let slider = document.querySelector('.slider'),
     posY2 = posY1 - evt.clientY;
     posY1 = evt.clientY;
 
-    // определение действия свайп или скролл
     if (!isSwipe && !isScroll) {
       let posY = Math.abs(posY2);
       if (posY > 7 || posX2 === 0) {
@@ -83,7 +82,6 @@ let slider = document.querySelector('.slider'),
     }
 
     if (isSwipe) {
-      // запрет ухода влево на первом слайде
       if (slideIndex === 0) {
         if (posInit < posX1) {
           setTransform(transform, 0);
@@ -93,7 +91,6 @@ let slider = document.querySelector('.slider'),
         }
       }
 
-      // запрет ухода вправо на последнем слайде
       if (slideIndex === --slides.length) {
         if (posInit > posX1) {
           setTransform(transform, lastTrf);
@@ -103,13 +100,11 @@ let slider = document.querySelector('.slider'),
         }
       }
 
-      // запрет протаскивания дальше одного слайда
       if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
         reachEdge();
         return;
       }
 
-      // двигаем слайд
       sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
     }
 
